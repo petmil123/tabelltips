@@ -27,7 +27,7 @@ export const PLTable = ({ tableData, predictions }: PLTableProps) => {
                     <TableHead>K</TableHead>
                     <TableHead>+/-</TableHead>
                     <TableHead>P</TableHead>
-                    {predictions.map(prediction => <TableHead key={prediction.name}>{prediction.name}</TableHead>)}
+                    {predictions.map((prediction, idx) => <TableHead key={prediction.name}>{`${idx + 1}: ${prediction.name}`}</TableHead>)}
                 </TableRow>
             </TableHeader>
             <TableBody>

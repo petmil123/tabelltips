@@ -20,7 +20,9 @@ const predictions = await fs.readFile("app/data/tips.json", "utf-8").then(JSON.p
 const predictionsWithPoints = predictions.map((prediction: any) => ({
   ...prediction,
   points: calculatePoints(tableData, prediction.tips)
-}));
+}))
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+.sort((a: any, b: any) => b.points - a.points);
   return (
     <>
     <h1 className="text-2xl">Tabelltipsoversikt</h1>
