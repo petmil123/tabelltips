@@ -1,7 +1,7 @@
 import { PLTable } from "@/components/PLTable";
 import fetchTableData, { Team } from "@/lib/fetching";
-import {promises as fs} from 'fs'
-import path from "path/win32";
+import { promises as fs } from 'fs';
+import path from "path";
 
 function calculatePoints(tableData: Team[], tips: string[]) {
   return tips.reduce((acc, guess, index) => {
