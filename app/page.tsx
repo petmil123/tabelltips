@@ -12,6 +12,8 @@ function calculatePoints(tableData: Team[], tips: string[]) {
   }, 0);
 }
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
 const tableData = await fetchTableData();
 const predictions = await fs.readFile("app/data/tips.json", "utf-8").then(JSON.parse);

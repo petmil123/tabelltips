@@ -73,5 +73,105 @@
             "Sunderland",
             "Burnley"
         ]
+    },
+    {
+        "name": "Daniel",
+        "tips": [
+            "Liverpool",
+            "Chelsea",
+            "Manchester City",
+            "Arsenal",
+            "Manchester United",
+            "Newcastle",
+            "Aston Villa",
+            "West Ham",
+            "Nottingham Forest",
+            "Tottenham",
+            "Bournemouth",
+            "Brighton",
+            "Fulham",
+            "Crystal Palace",
+            "Brentford",
+            "Everton",
+            "Sunderland",
+            "Wolverhampton",
+            "Burnley",
+            "Leeds"
+        ]
+    },
+    {
+        "name": "Fred",
+        "tips": [
+            "Chelsea",
+            "Liverpool",
+            "Manchester City",
+            "Arsenal",
+            "Newcastle",
+            "Tottenham",
+            "Aston Villa",
+            "Nottingham Forest",
+            "Crystal Palace",
+            "Brighton",
+            "Brentford",
+            "Sunderland",
+            "Fulham",
+            "Everton",
+            "Bournemouth",
+            "West Ham",
+            "Leeds",
+            "Manchester United",
+            "Burnley",
+            "Wolverhampton"
+        ]
+    },
+    {
+        "name": "Evan",
+        "tips": [
+            "Liverpool",
+            "Arsenal",
+            "Chelsea",
+            "Manchester City",
+            "Tottenham",
+            "Manchester United",
+            "Aston Villa",
+            "Newcastle",
+            "Nottingham Forest",
+            "Brighton",
+            "Crystal Palace",
+            "Fulham",
+            "Brentford",
+            "Bournemouth",
+            "Everton",
+            "Sunderland",
+            "West Ham",
+            "Wolverhampton",
+            "Leeds",
+            "Burnley"
+        ]
+    },
+    {
+        "name": "Jon",
+        "tips": [
+            "Liverpool",
+            "Arsenal",
+            "Chelsea",
+            "Manchester City",
+            "Tottenham",
+            "Aston Villa",
+            "Newcastle",
+            "Manchester United",
+            "Nottingham Forest",
+            "Brighton",
+            "Fulham",
+            "Crystal Palace",
+            "West Ham",
+            "Bournemouth",
+            "Everton",
+            "Sunderland",
+            "Brentford",
+            "Leeds",
+            "Wolverhampton",
+            "Burnley"
+        ]
     }
 ]
