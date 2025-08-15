@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Petar",
+        "tips": [
+            "Liverpool",
+            "Arsenal",
+            "Manchester City",
+            "Chelsea",
+            "Manchester United",
+            "Tottenham",
+            "Aston Villa",
+            "Newcastle",
+            "Brighton",
+            "Crystal Palace",
+            "Bournemouth",
+            "Fulham",
+            "Nottingham Forest",
+            "Brentford",
+            "Everton",
+            "Wolverhampton",
+            "Leeds",
+            "Sunderland",
+            "West Ham",
+            "Burnley"
+        ]
+    },
+    {
+        "name": "Anders",
+        "tips": [
+            "Chelsea",
+            "Manchester City",
+            "Liverpool",
+            "Arsenal",
+            "Manchester United",
+            "Newcastle",
+            "Tottenham",
+            "Aston Villa",
+            "Brighton",
+            "Nottingham Forest",
+            "Everton",
+            "Crystal Palace",
+            "West Ham",
+            "Bournemouth",
+            "Fulham",
+            "Wolverhampton",
+            "Sunderland",
+            "Burnley",
+            "Brentford",
+            "Leeds"
+        ]
+    },
+    {
+        "name": "Nico",
+        "tips": [
+            "Chelsea",
+            "Liverpool",
+            "Arsenal",
+            "Manchester City",
+            "Newcastle",
+            "Nottingham Forest",
+            "Aston Villa",
+            "Tottenham",
+            "Brighton",
+            "Crystal Palace",
+            "Manchester United",
+            "Fulham",
+            "West Ham",
+            "Bournemouth",
+            "Everton",
+            "Brentford",
+            "Leeds",
+            "Wolverhampton",
+            "Sunderland",
+            "Burnley"
+        ]
+    }
+]
