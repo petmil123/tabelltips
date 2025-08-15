@@ -1,6 +1,7 @@
 import { PLTable } from "@/components/PLTable";
 import fetchTableData, { Team } from "@/lib/fetching";
 import {promises as fs} from 'fs'
+import path from "path/win32";
 
 function calculatePoints(tableData: Team[], tips: string[]) {
   return tips.reduce((acc, guess, index) => {
@@ -16,7 +17,8 @@ export const dynamic = 'force-dynamic';
 
 export default async function Home() {
 const tableData = await fetchTableData();
-const predictions = await fs.readFile("app/data/tips.json", "utf-8").then(JSON.parse);
+const tipsPath = path.join(process.cwd(), "app", "data", "tips.json");
+const predictions = await fs.readFile(tipsPath, "utf-8").then(JSON.parse);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const predictionsWithPoints = predictions.map((prediction: any) => ({
