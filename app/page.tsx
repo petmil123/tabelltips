@@ -15,6 +15,8 @@ function calculatePoints(tableData: Team[], tips: string[]) {
 export default async function Home() {
 const tableData = await fetchTableData();
 const predictions = await fs.readFile("app/data/tips.json", "utf-8").then(JSON.parse);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const predictionsWithPoints = predictions.map((prediction: any) => ({
   ...prediction,
   points: calculatePoints(tableData, prediction.tips)
