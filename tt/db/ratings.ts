@@ -15,7 +15,6 @@ type RatingDbRow = {
   komfort: number;
   service: number;
   toalett: number;
-  betaling: number;
   created_at: Date;
   updated_at: Date;
 };
@@ -60,7 +59,6 @@ export async function createRating(input: RatingInput) {
       komfort,
       service,
       toalett,
-      betaling
     )
     values (
       ${input.venueSlug},
@@ -74,7 +72,6 @@ export async function createRating(input: RatingInput) {
       ${input.ratings.komfort},
       ${input.ratings.service},
       ${input.ratings.toalett},
-      ${input.ratings.betaling}
     )
   `;
 }
@@ -94,7 +91,6 @@ export async function updateRating(input: RatingInput) {
       komfort = ${input.ratings.komfort},
       service = ${input.ratings.service},
       toalett = ${input.ratings.toalett},
-      betaling = ${input.ratings.betaling},
       updated_at = now()
     where venue_slug = ${input.venueSlug}
       and rater_name_normalized = ${input.raterNameNormalized}
@@ -121,7 +117,6 @@ export async function getVenueAggregates(): Promise<VenueAggregate[]> {
         komfort: row.komfort,
         service: row.service,
         toalett: row.toalett,
-        betaling: row.betaling,
       },
     }))
   );
