@@ -20,6 +20,7 @@ export const venues: Venue[] = [
   { slug: "zum-flaucher", name: "Zum Flaucher" },
   { slug: "helene", name: "Helene" },
   { slug: "olympiapark", name: "Olympiapark" },
+  { slug: "bavaria", name: "Bavariapark" },
 ];
 
 export function findVenue(slug: string) {
