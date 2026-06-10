@@ -33,12 +33,7 @@ export const ratingCategories = [
     key: "toalett",
     dbColumn: "toalett",
     label: "Toalett",
-  },
-  {
-    key: "betaling",
-    dbColumn: "betaling",
-    label: "Betaling",
-  },
+  }
 ] as const;
 
 export type RatingCategoryKey = (typeof ratingCategories)[number]["key"];
