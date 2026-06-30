@@ -1,13 +1,25 @@
 "use client";
 
-import { useActionState, useEffect, useRef, useState } from "react";
-import { ratingCategories } from "../constants/categories";
+import { useActionState, useEffect, useState } from "react";
+import {
+  ratingCategories,
+  type RatingCategoryKey,
+} from "../constants/categories";
 import { venues } from "../constants/venues";
 import { initialSubmitRatingState } from "../lib/action-state";
 import { submitRating } from "../lib/actions";
 
+function createEmptyRatings() {
+  return Object.fromEntries(
+    ratingCategories.map((category) => [category.key, ""])
+  ) as Record<RatingCategoryKey, string>;
+}
+
 export function RatingForm() {
-  const formRef = useRef<HTMLFormElement>(null);
+  const [venueSlug, setVenueSlug] = useState("");
+  const [raterName, setRaterName] = useState("");
+  const [ratingInputs, setRatingInputs] = useState(createEmptyRatings);
+  const [passcode, setPasscode] = useState("");
   const [confirmUpdate, setConfirmUpdate] = useState(false);
   const [state, formAction, isPending] = useActionState(
     submitRating,
@@ -16,7 +28,10 @@ export function RatingForm() {
 
   useEffect(() => {
     if (state.status === "success") {
-      formRef.current?.reset();
+      setVenueSlug("");
+      setRaterName("");
+      setRatingInputs(createEmptyRatings());
+      setPasscode("");
       setConfirmUpdate(false);
     }
 
@@ -27,7 +42,6 @@ export function RatingForm() {
 
   return (
     <form
-      ref={formRef}
       action={formAction}
       className="mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-lg border bg-white p-4 shadow-sm sm:p-6"
     >
@@ -42,9 +56,13 @@ export function RatingForm() {
           Biergarten
           <select
             name="venueSlug"
+            value={venueSlug}
             required
             className="h-11 rounded-md border px-3 text-base"
-            onChange={() => setConfirmUpdate(false)}
+            onChange={(event) => {
+              setVenueSlug(event.target.value);
+              setConfirmUpdate(false);
+            }}
           >
             <option value="">Velg Biergarten</option>
             {venues.map((venue) => (
@@ -59,10 +77,14 @@ export function RatingForm() {
           Navn
           <input
             name="raterName"
+            value={raterName}
             required
             autoComplete="name"
             className="h-11 rounded-md border px-3 text-base"
-            onChange={() => setConfirmUpdate(false)}
+            onChange={(event) => {
+              setRaterName(event.target.value);
+              setConfirmUpdate(false);
+            }}
           />
         </label>
       </div>
@@ -81,8 +103,14 @@ export function RatingForm() {
               max={10}
               required
               inputMode="numeric"
+              value={ratingInputs[category.key]}
+              onChange={(event) =>
+                setRatingInputs((current) => ({
+                  ...current,
+                  [category.key]: event.target.value,
+                }))
+              }
               className="h-10 w-20 rounded-md border px-3 text-center text-base"
-              onChange={() => setConfirmUpdate(false)}
             />
           </label>
         ))}
@@ -93,8 +121,10 @@ export function RatingForm() {
         <input
           name="passcode"
           type="password"
+          value={passcode}
           required
           autoComplete="off"
+          onChange={(event) => setPasscode(event.target.value)}
           className="h-11 rounded-md border px-3 text-base"
         />
       </label>

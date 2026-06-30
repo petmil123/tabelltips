@@ -58,7 +58,7 @@ export async function createRating(input: RatingInput) {
       plassering,
       komfort,
       service,
-      toalett,
+      toalett
     )
     values (
       ${input.venueSlug},
@@ -71,7 +71,7 @@ export async function createRating(input: RatingInput) {
       ${input.ratings.plassering},
       ${input.ratings.komfort},
       ${input.ratings.service},
-      ${input.ratings.toalett},
+      ${input.ratings.toalett}
     )
   `;
 }
