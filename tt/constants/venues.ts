@@ -21,6 +21,7 @@ export const venues: Venue[] = [
   { slug: "helene", name: "Helene" },
   { slug: "olympiapark", name: "Olympiapark" },
   { slug: "bavaria", name: "Bavariapark" },
+  { slug: "dasbas", name: "Das Bad" },
 ];
 
 export function findVenue(slug: string) {
